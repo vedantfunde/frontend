@@ -1,0 +1,182 @@
+.listContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h2 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 28px;
+}
+
+.header p {
+  color: #666;
+  margin: 0;
+  font-size: 16px;
+}
+
+.companyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.companyCard {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.companyCard:hover {
+  border-color: #007bff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.companyHeader {
+  margin-bottom: 12px;
+}
+
+.companyHeader h3 {
+  margin: 0 0 4px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.domain {
+  color: #007bff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.description {
+  color: #555;
+  margin: 0 0 15px 0;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.companyMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.metaItem {
+  font-size: 13px;
+  color: #666;
+  background: #f8f9fa;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.socialLink {
+  color: #666;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
+
+.socialLink:hover {
+  color: #007bff;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+.loadMore {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.loadMoreButton {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.loadMoreButton:hover {
+  background: #0056b3;
+}
+
+.loadMoreButton:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.empty p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.error {
+  text-align: center;
+  padding: 40px;
+  color: #dc3545;
+}
+
+.error p {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+}
+
+.error button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.error button:hover {
+  background: #c82333;
+}
+
+@media (max-width: 768px) {
+  .companyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .header h2 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,275 @@
+.comparisonContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  z-index: 10;
+}
+
+.closeButton:hover {
+  color: #333;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.header h2 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 28px;
+}
+
+.header p {
+  color: #666;
+  margin: 0;
+  font-size: 16px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+}
+
+.selectionPanel {
+  border-right: 1px solid #eee;
+  padding-right: 20px;
+}
+
+.selectionPanel h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.companySelector {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.selectorItem {
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.selectorItem:hover {
+  border-color: #007bff;
+  background: #f8f9ff;
+}
+
+.selectorItem.selected {
+  border-color: #28a745;
+  background: #f8fff8;
+}
+
+.selectorName {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.selectorDomain {
+  color: #666;
+  font-size: 14px;
+}
+
+.checkmark {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.comparisonPanel {
+  min-height: 500px;
+}
+
+.comparisonPanel h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.emptyComparison {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.emptyComparison p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.comparisonTable {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 200px repeat(3, 1fr);
+  background: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.headerLabel {
+  padding: 15px;
+  font-weight: 600;
+  color: #333;
+  border-right: 1px solid #e0e0e0;
+}
+
+.headerCompany {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-right: 1px solid #e0e0e0;
+}
+
+.companyName {
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+}
+
+.removeButton {
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.removeButton:hover {
+  background: #c82333;
+}
+
+.tableBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.comparisonRow {
+  display: grid;
+  grid-template-columns: 200px repeat(3, 1fr);
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.comparisonRow:last-child {
+  border-bottom: none;
+}
+
+.metricLabel {
+  padding: 12px 15px;
+  font-weight: 600;
+  color: #666;
+  background: #fafafa;
+  border-right: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+.metricValue {
+  padding: 12px 15px;
+  color: #333;
+  border-right: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+.error {
+  text-align: center;
+  padding: 40px;
+  color: #dc3545;
+}
+
+.error p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .content {
+    grid-template-columns: 250px 1fr;
+  }
+
+  .tableHeader,
+  .comparisonRow {
+    grid-template-columns: 180px repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .selectionPanel {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding-right: 0;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .companySelector {
+    max-height: 300px;
+  }
+
+  .tableHeader,
+  .comparisonRow {
+    grid-template-columns: 150px repeat(3, 1fr);
+  }
+
+  .metricLabel,
+  .metricValue {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .headerLabel,
+  .headerCompany {
+    padding: 10px;
+  }
+}
